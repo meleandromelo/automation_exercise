@@ -5,8 +5,6 @@ Library    Browser
 ${URL}    https://automationexercise.com/
 ${BROWSER}    chromium
 
-
-${HOME_TEXT}    
 ${NAME_SIGNUP}    //input[@placeholder="Name"]
 ${EMAIL_SIGNUP}    //input[@data-qa="signup-email"]
 
@@ -48,3 +46,24 @@ ${CREATE_ACCOUNT_BUTTON}    //button[@data-qa="create-account"]
 
 ${CONTINUE_BUTTON}    //a[@data-qa="continue-button"]
 ${DELETE_ACCOUNT_BUTTON}    //a[@href="/delete_account"]
+
+${BUTTON_LOGIN}    //button[@data-qa="login-button"]
+
+
+${INPUT_EMAIL_LOGIN}    //input[@data-qa="login-email"]
+${INPUT_PASSWORD_LOGIN}    //input[@name="password"]
+
+${LOGOUT_BUTTON}    //a[@href="/logout"]
+
+
+${CONTACT_US_BUTTON}    //a[@href="/contact_us"]
+
+${NAME_INPUT}    //input[@name="name"]
+${EMAIL_INPUT}    //input[@name="email"]
+${SUBJECT_INPUT}    //input[@name="subject"]
+${MESSAGE_INPUT}    //textarea[@name="message"]
+
+${UPLOAD_FILE_INPUT}    //input[@name="upload_file"]
+${SUBMIT_INPUT}    //input[@name="submit"]
+${HOME_BUTTON}    //a[@class="btn btn-success"]
+
