@@ -1,5 +1,4 @@
 *** Settings ***
-Resource   ../resources/commom.resource
 Resource   ../resources/login.resource
 Resource    ../resources/account.resource
 

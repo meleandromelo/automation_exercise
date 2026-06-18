@@ -27,7 +27,7 @@ Fill Address Information
     Fill text   ${LAST_NAME_INPUT}    ${last_name}
     Fill Text  ${COMPANY_INPUT}    ${company}
     Fill Text  ${ADDRESS_INPUT}    ${address}
-    Fill Text    ${ADRESS_2_INPUT}    ${address_2}
+    Fill Text    ${ADDRESS_2_INPUT}    ${address_2}
 Select Country
   [Arguments]    ${country}
     Select Options By    ${SELECT_COUNTRY}  value  ${country}

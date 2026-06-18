@@ -6,6 +6,7 @@ Resource    variables.resource
 *** Keywords ***
 Open Browser Session
     New Browser     ${BROWSER}    headless=${FALSE}
+    Set Browser Timeout    30 seconds
     New Page    ${URL}
 
 Take Failure Screenshot
