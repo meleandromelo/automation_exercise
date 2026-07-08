@@ -66,3 +66,9 @@ ${PRODUCT_AVAILABILITY}  //div[@class='product-information']/p[2]
 ${PRODUCT_CONDITION}     //div[@class='product-information']/p[3]
 ${PRODUCT_BRAND}         //div[@class='product-information']/p[4]
 
+# Products
+${SEARCH_INPUT}          //input[@id="search_product"]
+${SEARCH_BUTTON}         //button[@id="submit_search"]
+${SEARCHED_PRODUCTS}      //h2[contains(.,'Searched Products')]
+${SEARCHED_PRODUCTS_LIST}=    css=.features_items .product-image-wrapper
+${BLUE_TOP_PRODUCT}      (//p[contains(.,'Blue Top')])[1]

@@ -1,217 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-06-11T10:00:08.040529" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-07-08T20:38:46.262400" rpa="false" schemaversion="5">
 <suite id="s1" name="Products" source="C:\Users\hypeb\OneDrive\Desktop\QA_Exercise\automation_exercise\tests\products.robot">
 <kw name="Open Browser Session" owner="common" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-06-11T10:00:08.372378" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\hypeb\\OneDrive\\Desktop\\QA_Exercise\\automation_exercise\\logs\\browser\\traces\\temp\\15f2dc79-7f9f-46bb-ad52-13497630f3dd"}</msg>
-<msg time="2026-06-11T10:00:08.426812" level="INFO">Starting Browser process C:\Users\hypeb\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:58167</msg>
-<msg time="2026-06-11T10:00:09.984876" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\hypeb\\OneDrive\\Desktop\\QA_Exercise\\automation_exercise\\logs\\browser\\traces\\temp\\15f2dc79-7f9f-46bb-ad52-13497630f3dd"}</msg>
+<msg time="2026-07-08T20:38:46.622828" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\hypeb\\OneDrive\\Desktop\\QA_Exercise\\automation_exercise\\logs\\browser\\traces\\temp\\e96b0b15-c3a0-4a72-ab4a-74c67afa4818"}</msg>
+<msg time="2026-07-08T20:38:46.676885" level="INFO">Starting Browser process C:\Users\hypeb\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:60791</msg>
+<msg time="2026-07-08T20:38:48.005035" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\hypeb\\OneDrive\\Desktop\\QA_Exercise\\automation_exercise\\logs\\browser\\traces\\temp\\e96b0b15-c3a0-4a72-ab4a-74c67afa4818"}</msg>
 <arg>${BROWSER}</arg>
 <arg>headless=${FALSE}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-06-11T10:00:08.371504" elapsed="1.613838"/>
+<status status="PASS" start="2026-07-08T20:38:46.621872" elapsed="1.384021"/>
 </kw>
 <kw name="Set Browser Timeout" owner="Browser">
 <arg>30 seconds</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2026-06-11T10:00:09.985636" elapsed="0.016775"/>
+<status status="PASS" start="2026-07-08T20:38:48.006296" elapsed="0.007699"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-06-11T10:00:18.966299" level="INFO">Successfully initialized new page object and opened url: https://automationexercise.com/</msg>
-<msg time="2026-06-11T10:00:18.966388" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2026-07-08T20:38:50.899752" level="INFO">Successfully initialized new page object and opened url: https://automationexercise.com/</msg>
+<msg time="2026-07-08T20:38:50.899833" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-06-11T10:00:10.002837" elapsed="8.963926"/>
+<status status="PASS" start="2026-07-08T20:38:48.014286" elapsed="2.885809"/>
 </kw>
-<status status="PASS" start="2026-06-11T10:00:08.370817" elapsed="10.596245"/>
+<status status="PASS" start="2026-07-08T20:38:46.621120" elapsed="4.279189"/>
 </kw>
-<test id="s1-t1" name="Verify All Products and product details page" line="11">
+<test id="s1-t1" name="Search Product" line="17">
 <kw name="Go to products page" owner="products">
 <kw name="Verify Page Loaded" owner="login">
 <kw name="Get Url" owner="Browser">
-<msg time="2026-06-11T10:00:18.986227" level="INFO">${url_homepage} = https://automationexercise.com/</msg>
+<msg time="2026-07-08T20:38:50.929349" level="INFO">${url_homepage} = https://automationexercise.com/</msg>
 <var>${url_homepage}</var>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the current URL.</doc>
-<status status="PASS" start="2026-06-11T10:00:18.982069" elapsed="0.004205"/>
+<status status="PASS" start="2026-07-08T20:38:50.923507" elapsed="0.005905"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${url_homepage}</arg>
 <arg>${expected_url}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-06-11T10:00:18.986441" elapsed="0.000670"/>
+<status status="PASS" start="2026-07-08T20:38:50.929647" elapsed="0.000689"/>
 </kw>
 <arg>https://automationexercise.com/</arg>
-<status status="PASS" start="2026-06-11T10:00:18.980479" elapsed="0.006728"/>
+<status status="PASS" start="2026-07-08T20:38:50.923087" elapsed="0.007349"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-06-11T10:00:18.987856" level="INFO">Clicks the element '//a[@href="/products"]'.</msg>
+<msg time="2026-07-08T20:38:50.931051" level="INFO">Clicks the element '//a[@href="/products"]'.</msg>
 <arg>${PRODUCTS_BUTTON}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-11T10:00:18.987324" elapsed="0.911317"/>
+<status status="PASS" start="2026-07-08T20:38:50.930555" elapsed="0.299176"/>
 </kw>
 <kw name="Verify Page Loaded" owner="login">
 <kw name="Get Url" owner="Browser">
-<msg time="2026-06-11T10:00:19.908830" level="INFO">${url_homepage} = https://automationexercise.com/products</msg>
+<msg time="2026-07-08T20:38:51.235449" level="INFO">${url_homepage} = https://automationexercise.com/products</msg>
 <var>${url_homepage}</var>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the current URL.</doc>
-<status status="PASS" start="2026-06-11T10:00:19.903021" elapsed="0.005872"/>
+<status status="PASS" start="2026-07-08T20:38:51.230807" elapsed="0.004706"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${url_homepage}</arg>
 <arg>${expected_url}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-06-11T10:00:19.909135" elapsed="0.000753"/>
+<status status="PASS" start="2026-07-08T20:38:51.235882" elapsed="0.000881"/>
 </kw>
 <arg>https://automationexercise.com/products</arg>
-<status status="PASS" start="2026-06-11T10:00:19.901257" elapsed="0.008737"/>
+<status status="PASS" start="2026-07-08T20:38:51.230178" elapsed="0.007210"/>
 </kw>
-<status status="PASS" start="2026-06-11T10:00:18.979825" elapsed="0.930240"/>
+<status status="PASS" start="2026-07-08T20:38:50.922478" elapsed="0.315010"/>
 </kw>
-<kw name="Click on View Product of first product" owner="products">
+<kw name="Search product with name" owner="products">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-07-08T20:38:51.253401" level="INFO">Fills the text 'Blue Top' in the given field.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>${product_name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-07-08T20:38:51.252295" elapsed="0.078629"/>
+</kw>
 <kw name="Click" owner="Browser">
-<msg time="2026-06-11T10:00:19.912148" level="INFO">Clicks the element '//a[@href="/product_details/1"]'.</msg>
-<arg>${FIRST_PRODUCT}</arg>
+<msg time="2026-07-08T20:38:51.333001" level="INFO">Clicks the element '//button[@id="submit_search"]'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-06-11T10:00:19.911292" elapsed="1.287486"/>
+<status status="PASS" start="2026-07-08T20:38:51.331116" elapsed="0.260567"/>
 </kw>
-<kw name="Verify Page Loaded" owner="login">
-<kw name="Get Url" owner="Browser">
-<msg time="2026-06-11T10:00:21.210971" level="INFO">${url_homepage} = https://automationexercise.com/product_details/1</msg>
-<var>${url_homepage}</var>
+<arg>Blue Top</arg>
+<status status="PASS" start="2026-07-08T20:38:51.237872" elapsed="0.354592"/>
+</kw>
+<kw name="Verify Product Search Results" owner="products">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-07-08T20:38:51.661100" level="INFO">Waited for Element with selector (//p[contains(.,'Blue Top')])[1] at state visible</msg>
+<arg>${BLUE_TOP_PRODUCT}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-07-08T20:38:51.600833" elapsed="0.061444"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2026-07-08T20:38:51.668166" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${BLUE_TOP_PRODUCT}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
-<doc>Returns the current URL.</doc>
-<status status="PASS" start="2026-06-11T10:00:21.201796" elapsed="0.009236"/>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2026-07-08T20:38:51.662524" elapsed="0.005695"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-07-08T20:38:51.668389" elapsed="0.000568"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-07-08T20:38:51.670762" level="INFO">${locator} = ((//p[contains(.,'Blue Top')])[1])[1]</msg>
+<var>${locator}</var>
+<arg>(${BLUE_TOP_PRODUCT})[${i}]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-07-08T20:38:51.670270" elapsed="0.000531"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-07-08T20:38:51.704843" level="INFO">Text: 'Blue Top'</msg>
+<msg time="2026-07-08T20:38:51.705126" level="INFO">${text} = Blue Top</msg>
+<var>${text}</var>
+<arg>${locator}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-07-08T20:38:51.670951" elapsed="0.034209"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
-<arg>${url_homepage}</arg>
-<arg>${expected_url}</arg>
+<arg>${text}</arg>
+<arg>${product_name}</arg>
+<arg>ignore_case=True</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-06-11T10:00:21.211346" elapsed="0.000887"/>
+<status status="PASS" start="2026-07-08T20:38:51.705439" elapsed="0.001225"/>
 </kw>
-<arg>https://automationexercise.com/product_details/1</arg>
-<status status="PASS" start="2026-06-11T10:00:21.200386" elapsed="0.011968"/>
-</kw>
-<status status="PASS" start="2026-06-11T10:00:19.910584" elapsed="1.301846"/>
-</kw>
-<kw name="Verify Product Details Displayed" owner="products">
-<for flavor="IN">
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-11T10:00:21.246074" level="INFO">Waited for Element with selector //div[@class='product-information']/h2 at state visible</msg>
-<arg>${locator}</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-11T10:00:21.219056" elapsed="0.027340"/>
-</kw>
-<var name="${locator}">//div[@class='product-information']/h2</var>
-<status status="PASS" start="2026-06-11T10:00:21.217369" elapsed="0.029120"/>
+<var name="${i}">1</var>
+<status status="PASS" start="2026-07-08T20:38:51.669988" elapsed="0.036767"/>
 </iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-11T10:00:21.254652" level="INFO">Waited for Element with selector //p[contains(text(),'Category')] at state visible</msg>
-<arg>${locator}</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-11T10:00:21.247119" elapsed="0.007685"/>
-</kw>
-<var name="${locator}">//p[contains(text(),'Category')]</var>
-<status status="PASS" start="2026-06-11T10:00:21.246644" elapsed="0.008254"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-11T10:00:21.265264" level="INFO">Waited for Element with selector (//span[contains(.,'Rs.')])[1] at state visible</msg>
-<arg>${locator}</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-11T10:00:21.257589" elapsed="0.007824"/>
-</kw>
-<var name="${locator}">(//span[contains(.,'Rs.')])[1]</var>
-<status status="PASS" start="2026-06-11T10:00:21.256624" elapsed="0.008868"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-11T10:00:21.276337" level="INFO">Waited for Element with selector //div[@class='product-information']/p[2] at state visible</msg>
-<arg>${locator}</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-11T10:00:21.265980" elapsed="0.010546"/>
-</kw>
-<var name="${locator}">//div[@class='product-information']/p[2]</var>
-<status status="PASS" start="2026-06-11T10:00:21.265685" elapsed="0.010977"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-11T10:00:21.283389" level="INFO">Waited for Element with selector //div[@class='product-information']/p[3] at state visible</msg>
-<arg>${locator}</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-11T10:00:21.277282" elapsed="0.006305"/>
-</kw>
-<var name="${locator}">//div[@class='product-information']/p[3]</var>
-<status status="PASS" start="2026-06-11T10:00:21.276894" elapsed="0.006787"/>
-</iter>
-<iter>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-06-11T10:00:21.292950" level="INFO">Waited for Element with selector //div[@class='product-information']/p[4] at state visible</msg>
-<arg>${locator}</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-06-11T10:00:21.284141" elapsed="0.009104"/>
-</kw>
-<var name="${locator}">//div[@class='product-information']/p[4]</var>
-<status status="PASS" start="2026-06-11T10:00:21.283828" elapsed="0.009587"/>
-</iter>
-<var>${locator}</var>
-<value>${PRODUCT_NAME}</value>
-<value>${PRODUCT_CATEGORY}</value>
-<value>${PRODUCT_PRICE}</value>
-<value>${PRODUCT_AVAILABILITY}</value>
-<value>${PRODUCT_CONDITION}</value>
-<value>${PRODUCT_BRAND}</value>
-<status status="PASS" start="2026-06-11T10:00:21.214685" elapsed="0.078801"/>
+<var>${i}</var>
+<value>1</value>
+<value>${count + 1}</value>
+<status status="PASS" start="2026-07-08T20:38:51.669045" elapsed="0.037784"/>
 </for>
-<status status="PASS" start="2026-06-11T10:00:21.214097" elapsed="0.080658"/>
+<arg>Blue Top</arg>
+<status status="PASS" start="2026-07-08T20:38:51.600178" elapsed="0.106791"/>
 </kw>
 <kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
 <arg>Take Failure Screenshot</arg>
 <doc>Runs the given keyword with the given arguments, if the test failed.</doc>
-<status status="PASS" start="2026-06-11T10:00:21.296465" elapsed="0.000996"/>
+<status status="PASS" start="2026-07-08T20:38:51.708844" elapsed="0.000871"/>
 </kw>
-<tag>smoke</tag>
-<status status="PASS" start="2026-06-11T10:00:18.967307" elapsed="2.331257"/>
+<tag>regression</tag>
+<status status="PASS" start="2026-07-08T20:38:50.900488" elapsed="0.809426"/>
 </test>
-<status status="PASS" start="2026-06-11T10:00:08.042374" elapsed="13.273335"/>
+<status status="PASS" start="2026-07-08T20:38:46.264702" elapsed="5.455745"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">smoke</stat>
+<stat pass="1" fail="0" skip="0">regression</stat>
 </tag>
 <suite>
 <stat name="Products" id="s1" pass="1" fail="0" skip="0">Products</stat>

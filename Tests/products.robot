@@ -14,3 +14,8 @@ Verify All Products and product details page
     Click on View Product of first product
     Verify Product Details Displayed
 
+Search Product
+    [Tags]    regression
+    Go to products page
+    Search product with name    Blue Top
+    Verify Product Search Results    Blue Top
