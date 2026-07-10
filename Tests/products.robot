@@ -7,7 +7,7 @@ Suite Setup    Open Browser Session
 Test Teardown    Run Keyword If Test Failed    Take Failure Screenshot
 
 
-*Test Cases ***
+*** Test Cases ***
 Verify All Products and product details page
     [Tags]    smoke
     Go to products page

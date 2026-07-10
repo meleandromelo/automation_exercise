@@ -1,0 +1,16 @@
+# Robot Framework
+logs/
+results/
+
+# Reports
+log.html
+report.html
+output.xml
+playwright-log.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/settings.json

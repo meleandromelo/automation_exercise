@@ -25,11 +25,11 @@ Search product with name
 
 Verify Product Search Results
     [arguments]    ${product_name}
-    Wait For Elements State    ${BLUE_TOP_PRODUCT}    visible
-    ${count}=    Get Element Count    ${BLUE_TOP_PRODUCT}
+    Wait For Elements State    ${SEARCHED_PRODUCTS_NAMES}    visible
+    ${count}=    Get Element Count    ${SEARCHED_PRODUCTS_NAMES}
     Should Be True    ${count} > 0
     FOR    ${i}    IN RANGE    1    ${count + 1}
-        ${locator}=    Set Variable    (${BLUE_TOP_PRODUCT})[${i}]
+        ${locator}=    Set Variable    (${SEARCHED_PRODUCTS_NAMES})[${i}]
         ${text}=    Get Text    ${locator}
         Should Contain    ${text}    ${product_name}    ignore_case=True
     END

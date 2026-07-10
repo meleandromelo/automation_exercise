@@ -70,5 +70,4 @@ ${PRODUCT_BRAND}         //div[@class='product-information']/p[4]
 ${SEARCH_INPUT}          //input[@id="search_product"]
 ${SEARCH_BUTTON}         //button[@id="submit_search"]
 ${SEARCHED_PRODUCTS}      //h2[contains(.,'Searched Products')]
-${SEARCHED_PRODUCTS_LIST}=    css=.features_items .product-image-wrapper
-${BLUE_TOP_PRODUCT}      (//p[contains(.,'Blue Top')])[1]
+${SEARCHED_PRODUCTS_NAMES}    //div[contains(@class,'features_items')]//div[contains(@class,'productinfo') and contains(@class,'text-center')]/p
